@@ -24,5 +24,5 @@ plugins:
 In you pages, you can add regex pills or unicode pills using the following syntax:
 
 ```markdown
-Do you know the unicode char `U+1F600`? Unicode can be matched using the regex: `#!re /U\+([0-9A-F]{4})/`.
+Do you know the unicode char U+1F600? Unicode can be matched using the regex: `#!re /U\+([0-9A-F]{4})/`.
 ```

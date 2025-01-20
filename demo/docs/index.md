@@ -13,6 +13,4 @@ You can add inline regex such as `#!re /regex/` which will redirect to [regex101
 You can also add Unicode codes such as U+3030 which will redirect to
 [https://symbl.cc](https://symbl.cc).
 
-`#!u U+1F600`
-
-`#!u U+1F1FA U+1F1F8`
+U+1F600 U+1F1FA U+1F1F8
