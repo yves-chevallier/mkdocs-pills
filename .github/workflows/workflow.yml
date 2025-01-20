@@ -1,0 +1,41 @@
+name: Publish to PyPI
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.x
+
+    - name: Install Poetry
+      run: pip install poetry
+
+    - name: Configure Poetry for CI/CD
+      run: poetry config virtualenvs.create false
+
+    - name: Install dependencies
+      run: poetry install --only main
+
+    - name: Build package with Poetry
+      run: poetry build
+
+    - name: Publish to PyPI
+      run: poetry build
+
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1

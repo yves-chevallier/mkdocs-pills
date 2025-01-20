@@ -1,0 +1,7 @@
+site_name: MkDocs Pills Demo
+site_url: https://github.com/yves-chevallier/mkdocs-pills
+site_author: Yves Chevallier
+theme:
+  name: material
+plugins:
+  - pills
