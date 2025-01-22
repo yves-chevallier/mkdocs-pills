@@ -4,4 +4,5 @@ site_author: Yves Chevallier
 theme:
   name: material
 plugins:
-  - pills
+  - pills:
+      language: en
